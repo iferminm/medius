@@ -35,6 +35,7 @@
         <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(slug=tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
         {% endif %}
         {% endblock head %}
+        <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
 </head>
 <body>
 
@@ -87,5 +88,17 @@
     </footer>
 
     {% include "analytics.html" %}
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript"> 
+        var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
+        if (mobile) { 
+            $('.hide-on-mobile').hide();
+        } else {
+            $('.hide-on-mobile').show();
+        }   
+    </script> 
 </body>
 </html>
